@@ -1,16 +1,18 @@
+/* eslint-disable prettier/prettier */
 import React from 'react'
 import { demo } from './views/demo/demo'
 import employeeInfo from './views/employeeInfo/employeeInfo'
 import department from './views/employeeInfo/department'
+import Deppage from './views/employeeDepartment/Deppage'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
 //ViewModify
-const Demo = React.lazy(() => import('./views/demo/demo'))
-const EmployeeInfo = React.lazy(() => import('./views/employeeInfo/employeeInfo'))
-const Department = React.lazy(() => import('./views/employeeInfo/department'))
+const AccordionLayout = React.lazy(() => import('./views/accordion/AccordionLayout'))
+const Department = React.lazy(() => import('./views/employeeDepartment/Deppage'))
+
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
@@ -102,9 +104,8 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
-  { path: '/demo', name: 'demo', element: demo },
-  { path: '/employeeInfo', name: 'ข้อมูลพนักงาน', element: employeeInfo },
-  { path: '/department', name: 'department', element: department },
+  { path: '/accordionLayout', name: 'ข้อมูลพนักงาน', element: AccordionLayout },//ข้อมูลพนักงาน
+  { path: '/Deppage', name: 'ตั้งค่าองค์กร', element: Deppage },
 ]
 
 export default routes
