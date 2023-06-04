@@ -119,6 +119,35 @@ const _nav = [
     icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
   
   },
+  {
+  component: CNavGroup,
+  name: 'ทดลอง',
+  to: '/notifications',
+  icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavGroup,
+    name: 'Buttons',
+    to: '/buttons',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Buttons',
+        to: '/buttons/buttons',
+      },
+      {
+        component: CNavItem,
+        name: 'Buttons groups',
+        to: '/buttons/button-groups',
+      },
+      {
+        component: CNavItem,
+        name: 'Dropdowns',
+        to: '/buttons/dropdowns',
+      },
+    ],
+  },
 ]
 
 export default _nav
