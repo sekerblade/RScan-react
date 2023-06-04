@@ -29,7 +29,7 @@ const Accordion = () => {
               aria-label="sm input example" />
             <br />
             <CAccordionItem itemKey={3}>
-              <CAccordionHeader>สาขา มธ</CAccordionHeader>
+              <CAccordionHeader>สาขา มธ sdfsddf</CAccordionHeader>
               <CAccordionBody>
                 <CAccordion activeItemKey={5}>
                   <CAccordionItem itemKey={1}>
