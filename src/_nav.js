@@ -136,6 +136,7 @@ const _nav = [
         name: 'Buttons',
         to: '/buttons/buttons',
       },
+<<<<<<< HEAD
       {
         component: CNavItem,
         name: 'Buttons groups',
@@ -146,6 +147,9 @@ const _nav = [
         name: 'Buttons groups',
         to: '/buttons/button-groups',
       },
+=======
+      
+>>>>>>> 7f4c7ee4f22b4df4d09d37d6f86f61e4cad46d97
       
     ],
   },
