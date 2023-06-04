@@ -136,8 +136,12 @@ const _nav = [
         name: 'Buttons',
         to: '/buttons/buttons',
       },
-      
-      
+      {
+        component: CNavItem,
+        name: 'Buttons',
+        to: '/buttons/buttons',
+      },
+
     ],
   },
 ]
