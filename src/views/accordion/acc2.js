@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
-import department from './department'
 import {
   CCard,
   CCardBody,
@@ -15,9 +14,9 @@ import {
 } from '@coreui/react'
 import { DocsExample } from 'src/components'
 
-function EmployeeInfo() {
-  return (
-    <>
+const Accordion = () => {
+    return (
+      <>
       <CAccordion alwaysOpen activeItemKey={2}>
         <CAccordionItem itemKey={1}>
           <CAccordionHeader>พนักงานทั้งหมด</CAccordionHeader>
@@ -26,7 +25,7 @@ function EmployeeInfo() {
             <CFormInput
               type="text"
               size="sm"
-              placeholder="Search.."
+              placeholder="ค้นหารายชื่อ"
               aria-label="sm input example" />
             <br />
             <CAccordionItem itemKey={3}>
@@ -69,7 +68,7 @@ function EmployeeInfo() {
         </CAccordionItem>
       </CAccordion>
     </>
-  )
-}
-
-export default EmployeeInfo
+    )
+  }
+  
+  export default Accordion

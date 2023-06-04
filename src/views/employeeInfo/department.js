@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
 
-export default function department() {
+function Department() {
   return (
     <div>
       <dl className="row text-sm">
@@ -33,3 +33,5 @@ export default function department() {
     </div>
   )
 }
+
+export default Department

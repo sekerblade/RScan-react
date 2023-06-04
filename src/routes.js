@@ -11,6 +11,9 @@ const Typography = React.lazy(() => import('./views/theme/typography/Typography'
 const Demo = React.lazy(() => import('./views/demo/demo'))
 const EmployeeInfo = React.lazy(() => import('./views/employeeInfo/employeeInfo'))
 const Department = React.lazy(() => import('./views/employeeInfo/department'))
+const Acc2 = React.lazy(() => import('./views/accordion/acc2'))
+const AccordionLayout = React.lazy(() => import('./views/accordion/AccordionLayout'))
+
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
@@ -105,6 +108,7 @@ const routes = [
   { path: '/demo', name: 'demo', element: demo },
   { path: '/employeeInfo', name: 'ข้อมูลพนักงาน', element: employeeInfo },
   { path: '/department', name: 'department', element: department },
+  { path: '/accordionLayout', name: 'ข้อมูลพนักงาน', element: AccordionLayout },
 ]
 
 export default routes
