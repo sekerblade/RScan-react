@@ -143,9 +143,10 @@ const _nav = [
       },
       {
         component: CNavItem,
-        name: 'Dropdowns',
-        to: '/buttons/dropdowns',
+        name: 'Buttons groups',
+        to: '/buttons/button-groups',
       },
+      
     ],
   },
 ]
