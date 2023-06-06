@@ -36,7 +36,7 @@ import CIcon from '@coreui/icons-react'
 import { CAccordion, CAccordionBody, CAccordionHeader, CAccordionItem } from '@coreui/react'
 import ReactImg from 'src/assets/images/pita.jpg'
 import { useState } from 'react'
-import { Card, Form, FormGroup, FormControl, Button, Modal } from 'react-bootstrap'
+
 
 
 
