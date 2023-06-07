@@ -109,6 +109,7 @@ const routes = [
   { path: '/employeeInfo', name: 'ข้อมูลพนักงาน', element: employeeInfo },
   { path: '/department', name: 'department', element: department },
   { path: '/accordionLayout', name: 'ข้อมูลพนักงาน', element: AccordionLayout },
+  { path: '/acc2', name: 'ข้อมูลพนักงาน', element: Acc2 },
 ]
 
 export default routes
