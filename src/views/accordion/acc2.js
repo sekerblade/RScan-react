@@ -1,22 +1,20 @@
-/* eslint-disable prettier/prettier */
-import AccordionLayout from './AccordionLayout'
-import React from 'react'
 import {
-  CCard,
-  CCardBody,
-  CCardHeader,
-  CCol,
-  CRow,
   CAccordion,
   CAccordionBody,
   CAccordionHeader,
   CAccordionItem,
+  CCard,
+  CCardBody,
+  CCardHeader,
+  CCol,
   CFormInput,
   CListGroupItem,
+  CRow,
 } from '@coreui/react'
-import { DocsExample } from 'src/components'
-import { useState } from 'react'
 import Axios from 'axios'
+import React, { useState } from 'react'
+import { DocsExample } from 'src/components'
+import AccordionLayout from './AccordionLayout'
 // import { Form } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
 
@@ -87,7 +85,6 @@ const Accordion = () => {
   }
   return (
     <>
-    
       <CAccordion alwaysOpen activeItemKey={2}>
         <CAccordionItem itemKey={1}>
           <CAccordionHeader>พนักงานทั้งหมด</CAccordionHeader>
@@ -136,8 +133,9 @@ const Accordion = () => {
               return (
                 <>
                   <CCard>
-                    <CListGroupItem>ชื่อ: {val.Name} {val.SureName}</CListGroupItem>
-                    
+                    <CListGroupItem>
+                      ชื่อ: {val.Name} {val.SureName}
+                    </CListGroupItem>
                   </CCard>
                 </>
               )

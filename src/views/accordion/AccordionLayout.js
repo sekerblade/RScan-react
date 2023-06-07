@@ -1,12 +1,9 @@
-/* eslint-disable prettier/prettier */
-import Accordion from './acc2'
-import React from 'react'
+import CIcon from '@coreui/icons-react'
 import {
-  CModal,
-  CModalHeader,
-  CModalBody,
-  CFormInput,
-  CModalFooter,
+  CAccordion,
+  CAccordionBody,
+  CAccordionHeader,
+  CAccordionItem,
   CButton,
   CCard,
   CCardBody,
@@ -18,36 +15,34 @@ import {
   CCardSubtitle,
   CCardText,
   CCardTitle,
+  CCol,
+  CForm,
+  CFormInput,
+  CFormLabel,
+  CInputGroup,
+  CInputGroupText,
   CListGroup,
   CListGroupItem,
+  CModal,
+  CModalBody,
+  CModalFooter,
+  CModalHeader,
+  CModalTitle,
   CNav,
   CNavItem,
   CNavLink,
-  CCol,
   CRow,
-  CForm,
-  CModalTitle,
-  CInputGroup,
-  CInputGroupText,
-  CFormLabel,
 } from '@coreui/react'
-import { DocsExample } from 'src/components'
-import CIcon from '@coreui/icons-react'
-import { CAccordion, CAccordionBody, CAccordionHeader, CAccordionItem } from '@coreui/react'
+import React, { useState } from 'react'
 import ReactImg from 'src/assets/images/pita.jpg'
-import { useState } from 'react'
-
-
-
-
-
+import { DocsExample } from 'src/components'
+import Accordion from './acc2'
 
 const AccordionLayout = () => {
-  const [employeeList, setEmployeeList] = useState([]);
+  const [employeeList, setEmployeeList] = useState([])
   const [visibleXL, setVisibleXL] = useState(false)
   const [Delete, setDelete] = useState(false)
   const [Add, setAdd] = useState(false)
-
 
   return (
     <CRow>
@@ -168,11 +163,19 @@ const AccordionLayout = () => {
                         <CFormLabel htmlFor="basic-url" className="fw-bold text-uppercase">
                           ตำแหน่ง
                         </CFormLabel>
-                        <CFormInput size="lg" aria-label="position" placeholder="กรุณากรอกตำแหน่ง" />
+                        <CFormInput
+                          size="lg"
+                          aria-label="position"
+                          placeholder="กรุณากรอกตำแหน่ง"
+                        />
                         <CFormLabel htmlFor="basic-url" className="fw-bold text-uppercase">
                           เงินเดือน
                         </CFormLabel>
-                        <CFormInput size="lg" aria-label="salary" placeholder="กรุณากรอกเงินเดือน" />
+                        <CFormInput
+                          size="lg"
+                          aria-label="salary"
+                          placeholder="กรุณากรอกเงินเดือน"
+                        />
                       </CModalBody>
                       <CModalFooter>
                         <CButton color="secondary" onClick={() => setVisibleXL(false)}>
