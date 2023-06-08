@@ -6,6 +6,7 @@ import {
   CCard,
   CCardBody,
   CCardHeader,
+  CCardTitle,
   CCol,
   CFormInput,
   CListGroupItem,
@@ -17,7 +18,7 @@ import { DocsExample } from 'src/components'
 import AccordionLayout from './AccordionLayout'
 // import { Form } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
-
+import EmployeeList from 'src/api/employee/EmployeeList'
 const Accordion = () => {
   const [name, setName] = useState('')
   const [age, setAge] = useState(0)
@@ -29,7 +30,7 @@ const Accordion = () => {
   const [employeeList, setEmployeeList] = useState([])
 
   const getEmployees = () => {
-    Axios.get('http://localhost:3001/emp_info').then((response) => {
+    Axios.get('http://localhost:3001/employees').then((response) => {
       setEmployeeList(response.data)
     })
   }
@@ -83,66 +84,60 @@ const Accordion = () => {
       )
     })
   }
+  const getindex = (id) => {
+    return <div>{id}</div>
+  }
   return (
     <>
-      <CAccordion alwaysOpen activeItemKey={2}>
-        <CAccordionItem itemKey={1}>
-          <CAccordionHeader>พนักงานทั้งหมด</CAccordionHeader>
+      <CCol sm={6}>
+        <CRow>
+          <CCard>
+            <CCardTitle sm={6}>สาขาไมด้า แอร์พอร์ต</CCardTitle>
+            <CAccordion alwaysOpen activeItemKey={2}>
+              <CAccordionItem itemKey={1}>
+                <CAccordionHeader onClick={getEmployees}>พนักงานทั้งหมด</CAccordionHeader>
 
-          <CAccordionBody>
-            <CFormInput
-              type="text"
-              size="sm"
-              placeholder="ค้นหารายชื่อ"
-              aria-label="sm input example"
-            />
-            <br />
-            <CAccordionItem itemKey={3}>
-              <CAccordionHeader>สาขา มธ มช จุฬา บลาๆ</CAccordionHeader>
-              <CAccordionBody>
-                <CAccordion activeItemKey={5}>
-                  <CAccordionItem itemKey={1}>
-                    <CAccordionHeader>ฝ่ายขาย</CAccordionHeader>
-                    <CAccordionBody></CAccordionBody>
-                  </CAccordionItem>
-                  <CAccordionItem itemKey={2}>
-                    <CAccordionHeader>ทรัพยากรบุคคล</CAccordionHeader>
-                    <CAccordionBody></CAccordionBody>
-                  </CAccordionItem>
-                  <CAccordionItem itemKey={3}>
-                    <CAccordionHeader>บัญชี</CAccordionHeader>
-                    <CAccordionBody></CAccordionBody>
-                  </CAccordionItem>
-                  <CAccordionItem itemKey={4}>
-                    <CAccordionHeader>แม่บ้าน</CAccordionHeader>
-                    <CAccordionBody></CAccordionBody>
-                  </CAccordionItem>
-                </CAccordion>
-              </CAccordionBody>
-            </CAccordionItem>
-          </CAccordionBody>
-        </CAccordionItem>
-        <CAccordionItem itemKey={2}>
-          <CAccordionHeader>พนักงานลาออก</CAccordionHeader>
-          <CAccordionBody></CAccordionBody>
-        </CAccordionItem>
-        <CAccordionItem itemKey={3}>
-          <CAccordionHeader onClick={getEmployees}>แสดงรายชื่อพนังงานทั้งหมด</CAccordionHeader>
-          <CAccordionBody>
-            {employeeList.map((val, key) => {
-              return (
-                <>
-                  <CCard>
-                    <CListGroupItem>
-                      ชื่อ: {val.Name} {val.SureName}
-                    </CListGroupItem>
-                  </CCard>
-                </>
-              )
-            })}
-          </CAccordionBody>
-        </CAccordionItem>
-      </CAccordion>
+                <CAccordionBody>
+                  <CFormInput
+                    type="text"
+                    size="sm"
+                    placeholder="ค้นหารายชื่อ"
+                    aria-label="sm input example"
+                  />
+                  <CAccordion activeItemKey={5}>
+                    <CAccordionItem itemKey={1}>
+                      <CAccordionHeader>ฝ่ายขาย</CAccordionHeader>
+                      <CAccordionBody>
+                        <CAccordionBody>
+                          {employeeList.map((val, key) => {
+                            const index = val.ID
+
+                            return (
+                              <>
+                                {getindex(index)}
+                                <CCard>
+                                  <CListGroupItem>
+                                    ชื่อ: {val.Name} {val.SureName} {index}
+                                  </CListGroupItem>
+                                </CCard>
+                              </>
+                            )
+                          })}
+                        </CAccordionBody>
+                      </CAccordionBody>
+                    </CAccordionItem>
+                  </CAccordion>
+                </CAccordionBody>
+              </CAccordionItem>
+              <CAccordionItem itemKey={2}>
+                <CAccordionHeader>พนักงานลาออก</CAccordionHeader>
+                <CAccordionBody></CAccordionBody>
+              </CAccordionItem>
+            </CAccordion>
+            <CCardBody></CCardBody>
+          </CCard>
+        </CRow>
+      </CCol>
     </>
   )
 }

@@ -1,30 +1,30 @@
 /* eslint-disable prettier/prettier */
-import React from 'react'
-import CIcon from '@coreui/icons-react'
 import {
+  cilAddressBook,
   cilBell,
+  cilBuilding,
   cilCalculator,
+  cilCalendar,
+  cilChartLine,
   cilChartPie,
+  cilCog,
   cilCursor,
   cilDescription,
   cilDrop,
+  cilEnvelopeLetter,
+  cilGrid,
+  cilHistory,
   cilNotes,
   cilPencil,
   cilPuzzle,
   cilSpeedometer,
   cilStar,
-  cilAddressBook,
-  cilCalendar,
-  cilHistory,
   cilSun,
-  cilGrid,
-  cilEnvelopeLetter,
-  cilChartLine,
-  cilCog,
   cilUserX,
-  cilBuilding,
 } from '@coreui/icons'
+import CIcon from '@coreui/icons-react'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import React from 'react'
 
 const _nav = [
   {
@@ -46,21 +46,18 @@ const _nav = [
     name: 'รายงานรายวัน',
     to: '/employeeInfo',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
- 
   },
   {
     component: CNavItem,
     name: 'รายงานช่วงเวลา',
     to: '/employeeInfo',
     icon: <CIcon icon={cilCalendar} customClassName="nav-icon" />,
- 
   },
   {
     component: CNavItem,
     name: 'รายงานการลางาน',
     to: '/employeeInfo',
     icon: <CIcon icon={cilGrid} customClassName="nav-icon" />,
- 
   },
   {
     component: CNavTitle,
@@ -71,42 +68,36 @@ const _nav = [
     name: 'องค์กร / สาขา / แผนก',
     to: '/employeeInfo',
     icon: <CIcon icon={cilBuilding} customClassName="nav-icon" />,
- 
   },
   {
     component: CNavItem,
     name: 'เงื่อนไขการลา',
     to: '/employeeInfo',
     icon: <CIcon icon={cilUserX} customClassName="nav-icon" />,
- 
   },
   {
     component: CNavItem,
     name: 'ตารางเวลา',
     to: '/employeeInfo',
-    icon: <CIcon icon={cilHistory } customClassName="nav-icon" />,
-  
+    icon: <CIcon icon={cilHistory} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'ข้อมูลพนักงาน',
     to: '/accordionLayout',
     icon: <CIcon icon={cilAddressBook} customClassName="nav-icon" />,
-
   },
   {
     component: CNavItem,
     name: 'วันหยุดประจำปี',
     to: '/employeeInfo',
     icon: <CIcon icon={cilSun} customClassName="nav-icon" />,
- 
   },
   {
     component: CNavItem,
     name: 'ประกาศ ข่าวสาร',
     to: '/employeeInfo',
     icon: <CIcon icon={cilEnvelopeLetter} customClassName="nav-icon" />,
-  
   },
   {
     component: CNavTitle,
@@ -117,13 +108,12 @@ const _nav = [
     name: 'คู่มือเครื่องแสกน',
     to: '/employeeInfo',
     icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
-  
   },
   {
-  component: CNavGroup,
-  name: 'ทดลอง',
-  to: '/notifications',
-  icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
+    component: CNavGroup,
+    name: 'ทดลอง',
+    to: '/notifications',
+    icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
@@ -141,7 +131,6 @@ const _nav = [
         name: 'Buttons',
         to: '/buttons/buttons',
       },
-
     ],
   },
 ]

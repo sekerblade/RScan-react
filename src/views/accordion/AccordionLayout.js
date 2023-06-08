@@ -46,14 +46,8 @@ const AccordionLayout = () => {
 
   return (
     <CRow>
-      <CCol sm={6}>
-        <CCard>
-          <CCardBody>
-            <CCardTitle>รายชื่อพนักงาน</CCardTitle>
-            <Accordion />
-          </CCardBody>
-        </CCard>
-      </CCol>
+      <Accordion />
+
       <CCol sm={6}>
         <CRow>
           <CCard>
